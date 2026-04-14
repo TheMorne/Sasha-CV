@@ -1,33 +1,463 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Morne du Toit | CV</title>
+  <meta name="description" content="Full Stack Software Engineer, AI Engineer, and Frontend Expert portfolio of Morne du Toit">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">MDT</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
 
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Morne <span>du Toit</span></h1>
+        <p class="hero-role"><span id="typewriter"></span><span class="cursor"></span></p>
+        <p class="hero-tagline">I build intelligent, scalable software products that transform complex industrial workflows into elegant, high-performance user experiences.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+          <a href="#experience" class="btn btn-outline"><i class="fas fa-briefcase"></i> View Experience</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/TheMorne" target="_blank" class="social-link" title="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/morne-du-toit-9801731a0" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:mornef.dt@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+27748155147" class="social-link" title="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-wrap">
+          <div class="profile-glow"></div>
+          <div class="profile-card">
+            <div class="profile-card-bg"></div>
+            <div class="profile-avatar">
+              <img src="img/morne-du-toit.jpg" alt="Morne du Toit" class="profile-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+              <i class="fas fa-user profile-fallback-icon"></i>
+            </div>
+            <div class="profile-info">
+              <h3>Morne du Toit</h3>
+              <p>Full Stack Software Engineer | AI Engineer | Frontend Expert</p>
+              <div class="profile-stats">
+                <div class="stat">
+                  <div class="stat-number">7</div>
+                  <div class="stat-label">Yrs Coding</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Design Projects</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">400+</div>
+                  <div class="stat-label">Weddings Shot</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-badge badge-1">
+            <div class="badge-icon purple-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <div class="badge-title">AI Quality Control Lead</div>
+              <div class="badge-sub">Manufacturing Systems</div>
+            </div>
+          </div>
+          <div class="float-badge badge-2">
+            <div class="badge-icon cyan-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="badge-title">Pretoria</div>
+              <div class="badge-sub">South Africa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll-btn">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <section id="about">
+    <div class="section-inner">
+      <span class="section-tag"><i class="fas fa-user-circle"></i> About Me</span>
+      <h2 class="section-title">Who I Am &amp;<br>What I Do</h2>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p>I am an expert Frontend Software Engineer who bridges the gap between complex industrial logic and elite user experience. With a Bachelor of Information Technology and studies in Graphic Design, I bring a full-spectrum approach to software that combines robust architecture with pixel-perfect execution.</p>
+          <p>I specialize in building high-scale cross-platform solutions using Angular and Flutter, and I have led the development of AI quality control systems for manufacturing environments. My work is grounded in ownership, innovation, and translating intricate business requirements into elegant, user-centered products.</p>
+          <p>Whether I am shaping infrastructure architecture, refining PostgreSQL schemas, or engineering high-performance frontends, my focus is always the same: deliver software that is scalable, intuitive, and built to perform under pressure.</p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Full Name</span>
+              <span class="detail-value">Morne du Toit</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Pretoria, South Africa</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">mornef.dt@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Phone</span>
+              <span class="detail-value">074 815 5147</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Available</span>
+              <span class="detail-value available-dot">Open to New Opportunities</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Languages</span>
+              <span class="detail-value">English, Afrikaans, German</span>
+            </div>
+          </div>
+          <p style="margin-top: 1.5rem;">I bring 7 years of coding experience, 10 years of design experience, 9 years of wedding photography experience, 12 software projects delivered, 20+ design projects completed, and 400+ weddings photographed.</p>
+          <a href="#" class="btn btn-primary"
+            style="margin-top: 2rem; display: inline-flex;"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card fade-up">
+            <div class="highlight-icon purple-icon"><i class="fas fa-code"></i></div>
+            <div class="highlight-content">
+              <h4>Frontend Architecture</h4>
+              <p>I design and build scalable frontend systems that keep complex products maintainable, fast, and user-focused.</p>
+            </div>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-icon cyan-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="highlight-content">
+              <h4>AI-Driven Product Engineering</h4>
+              <p>I apply AI practically in production environments, especially in quality control and industrial process optimization.</p>
+            </div>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-icon green-icon"><i class="fas fa-rocket"></i></div>
+            <div class="highlight-content">
+              <h4>Cross-Platform Development</h4>
+              <p>I ship high-quality web and mobile solutions with Angular and Flutter, optimized for scale and reliability.</p>
+            </div>
+          </div>
+          <div class="highlight-card fade-up">
+            <div class="highlight-icon orange-icon"><i class="fas fa-users"></i></div>
+            <div class="highlight-content">
+              <h4>UX/UI Leadership</h4>
+              <p>I turn dense business requirements into polished interfaces that are intuitive, consistent, and built for real users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-inner">
+      <span class="section-tag"><i class="fas fa-tools"></i> Skills</span>
+      <h2 class="section-title">Expertise &amp;<br>Technical Skills</h2>
+      <p class="section-subtitle">My core stack combines modern frontend engineering, cross-platform mobile development, backend services, and cloud platforms for production-grade delivery.</p>
+      <div class="skills-grid">
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(124,58,237,.15);color:#7c3aed"><i class="fas fa-laptop-code"></i></div>
+            <span class="skill-category-title">Frontend Engineering</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Android SDK</span>
+            <span class="skill-tag">iOS SDK</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Responsive UI</span>
+            <span class="skill-tag">Frontend Architecture</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(6,182,212,.15);color:#06b6d4"><i class="fas fa-server"></i></div>
+            <span class="skill-category-title">Backend Engineering</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">API Design</span>
+            <span class="skill-tag">Object-Oriented Design</span>
+            <span class="skill-tag">System Integration</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(34,197,94,.15);color:#22c55e"><i class="fas fa-database"></i></div>
+            <span class="skill-category-title">Data &amp; Quality</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Schema Optimization</span>
+            <span class="skill-tag">Bug Tracking</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(249,115,22,.15);color:#f97316"><i class="fas fa-tools"></i></div>
+            <span class="skill-category-title">Cloud &amp; Platform</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Scalable Infrastructure</span>
+            <span class="skill-tag">Solution Architecture</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(236,72,153,.15);color:#ec4899"><i class="fas fa-paint-brush"></i></div>
+            <span class="skill-category-title">UX/UI &amp; Product Design</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">UX/UI Design</span>
+            <span class="skill-tag">Graphic Design</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Photo Editing</span>
+            <span class="skill-tag">Video Editing</span>
+          </div>
+        </div>
+        <div class="skill-category fade-up">
+          <div class="skill-category-header">
+            <div class="skill-category-icon"
+              style="background:rgba(234,179,8,.15);color:#eab308"><i class="fas fa-comments"></i></div>
+            <span class="skill-category-title">Soft Skills</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Creative Problem Solving</span>
+            <span class="skill-tag">Mentoring</span>
+            <span class="skill-tag">Project Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="alt-bg">
+    <div class="section-inner">
+      <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-subtitle">From startup execution to enterprise-scale delivery, I have built and led cross-platform products that balance engineering depth with polished user experience.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot dot-purple"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-title">Full Stack Software Engineer</span>
+              <span class="timeline-badge badge-purple">2022 - 2026</span>
+            </div>
+            <div class="timeline-org org-purple"><i class="fas fa-building"></i> BMW Group &nbsp;·&nbsp; Full-time</div>
+            <div class="timeline-desc">
+              <p>Led full stack delivery across high-impact enterprise initiatives, combining robust architecture with frontend excellence.</p>
+              <ul>
+                <li>[ Add BMW achievement #1 ]</li>
+                <li>[ Add BMW achievement #2 ]</li>
+                <li>[ Add BMW achievement #3 ]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-purple"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-title">Web &amp; Mobile App Developer / UX/UI Designer</span>
+              <span class="timeline-badge badge-purple">2017 - 2022</span>
+            </div>
+            <div class="timeline-org org-purple"><i class="fas fa-building"></i> Evercrown &nbsp;·&nbsp; Full-time</div>
+            <div class="timeline-desc">
+              <p>Designed and developed web and mobile products end-to-end, owning both UX direction and implementation quality.</p>
+              <ul>
+                <li>Designed user-centered interfaces and translated business requirements into usable, production-ready experiences.</li>
+                <li>Built and maintained cross-platform mobile and web applications with a strong focus on performance and scalability.</li>
+                <li>Collaborated with stakeholders to define product priorities, iterate quickly, and deliver high-impact releases.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-purple"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-title">Flutter Developer</span>
+              <span class="timeline-badge badge-purple">2022</span>
+            </div>
+            <div class="timeline-org org-purple"><i class="fas fa-building"></i> Spaza &nbsp;·&nbsp; Contract</div>
+            <div class="timeline-desc">
+              <p>Delivered cross-platform mobile solutions with strong UX standards, production quality, and team collaboration.</p>
+              <ul>
+                <li>Designed and developed elegant Flutter interfaces based on business and functional requirements.</li>
+                <li>Analyzed, built, and tested cross-platform mobile application features across multiple operating systems.</li>
+                <li>Integrated end-user feedback into prototypes and production iterations to improve usability.</li>
+                <li>Tracked and resolved defects while ensuring compliance with internal and industry software standards.</li>
+                <li>Mentored team members, communicated clearly across teams, and solved technical challenges with an OOP-first mindset.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="section-inner">
+      <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot dot-cyan"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-title">Bachelor's Degree in Information Technology</span>
+              <span class="timeline-badge badge-cyan">2019 - 2021</span>
+            </div>
+            <div class="timeline-org org-cyan"><i class="fas fa-university"></i> Eduvos</div>
+            <div class="timeline-desc">
+              <p>Completed Bachelor's studies focused on core information technology principles, software development, and solution design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot dot-cyan"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-title">Bachelor's Degree in Industrial Design / Graphic Design</span>
+              <span class="timeline-badge badge-cyan">2016 - 2018</span>
+            </div>
+            <div class="timeline-org org-cyan"><i class="fas fa-university"></i> Open Window</div>
+            <div class="timeline-desc">
+              <p>Built a strong design foundation in visual communication, user-centered design, and creative problem solving.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt-bg">
+    <div class="section-inner">
+      <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+      <h2 class="section-title">Let's Work<br>Together</h2>
+      <p class="section-subtitle">I am open to exciting software engineering opportunities where I can contribute across architecture, AI innovation, and user experience.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="mailto:mornef.dt@gmail.com" class="contact-item">
+            <div class="contact-icon purple-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-text-label">Email</div>
+              <div class="contact-text-value">mornef.dt@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+27748155147" class="contact-item">
+            <div class="contact-icon cyan-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="contact-text-label">Phone</div>
+              <div class="contact-text-value">074 815 5147</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/morne-du-toit-9801731a0" target="_blank" class="contact-item">
+            <div class="contact-icon green-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <div class="contact-text-label">LinkedIn</div>
+              <div class="contact-text-value">linkedin.com/in/morne-du-toit-9801731a0</div>
+            </div>
+          </a>
+          <a href="https://github.com/TheMorne" target="_blank" class="contact-item">
+            <div class="contact-icon orange-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <div class="contact-text-label">GitHub</div>
+              <div class="contact-text-value">github.com/TheMorne</div>
+            </div>
+          </a>
+          <a href="https://maps.google.com/?q=Pretoria,South+Africa" target="_blank" class="contact-item">
+            <div class="contact-icon purple-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-text-label">Location</div>
+              <div class="contact-text-value">Pretoria, South Africa</div>
+            </div>
+          </a>
+        </div>
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Job Opportunity / Collaboration">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">MDT</div>
+      <p>Designed &amp; Built by <span>Morne du Toit</span> &copy; 2026</p>
+      <div class="footer-social">
+        <a href="https://github.com/TheMorne" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/morne-du-toit-9801731a0" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:mornef.dt@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -89,3 +89,16 @@ if (copyEmailBtn) {
   });
 }
 
+const downloadCvBtn = document.getElementById('download-cv-btn');
+
+if (downloadCvBtn) {
+  downloadCvBtn.addEventListener('click', e => {
+    e.preventDefault();
+    const cvUrl = downloadCvBtn.getAttribute('href') || 'cv/Morne-du-Toit-CV.html?print=1';
+    const popup = window.open(cvUrl, '_blank', 'noopener');
+    if (!popup) {
+      window.location.href = cvUrl;
+    }
+  });
+}
+

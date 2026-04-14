@@ -279,5 +279,24 @@
     </section>
   </main>
 </body>
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const shouldPrint = params.get('print') === '1';
+    if (!shouldPrint) return;
+
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.print();
+      }, 350);
+    });
+
+    window.addEventListener('afterprint', function () {
+      if (window.opener && !window.opener.closed) {
+        window.close();
+      }
+    });
+  })();
+</script>
 </html>
 

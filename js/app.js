@@ -11,7 +11,7 @@ mobileMenu.innerHTML = `
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Hire Me</a>
+  <a href="cv/Morne-du-Toit-CV.html?print=1" class="nav-cta download-cv-trigger">Download CV</a>
 `;
 document.body.appendChild(mobileMenu);
 
@@ -89,16 +89,14 @@ if (copyEmailBtn) {
   });
 }
 
-const downloadCvBtn = document.getElementById('download-cv-btn');
-
-if (downloadCvBtn) {
-  downloadCvBtn.addEventListener('click', e => {
+document.querySelectorAll('.download-cv-trigger').forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    const cvUrl = downloadCvBtn.getAttribute('href') || 'cv/Morne-du-Toit-CV.html?print=1';
-    const popup = window.open(cvUrl, '_blank', 'noopener');
+    const cvUrl = link.getAttribute('href') || 'cv/Morne-du-Toit-CV.html?print=1';
+    const popup = window.open(cvUrl, '_blank', 'noopener,noreferrer');
     if (!popup) {
-      window.location.href = cvUrl;
+      alert('Please allow pop-ups to open the CV print dialog.');
     }
   });
-}
+});
 

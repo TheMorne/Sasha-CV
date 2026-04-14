@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: var(--font);
+  font-family: var(--font), Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
@@ -63,7 +63,7 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   background: var(--grad);
@@ -178,7 +178,7 @@ nav.scrolled {
 }
 
 .hero-name {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: clamp(2.8rem, 6vw, 4.75rem);
   font-weight: 800;
   line-height: 1.05;
@@ -243,7 +243,7 @@ nav.scrolled {
   gap: .5rem;
   cursor: pointer;
   border: none;
-  font-family: var(--font);
+  font-family: var(--font), Arial, sans-serif;
   transition: all .3s;
 }
 
@@ -369,7 +369,7 @@ nav.scrolled {
 }
 
 .profile-info h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: 1.28rem;
   font-weight: 700;
   margin-bottom: .4rem;
@@ -390,7 +390,7 @@ nav.scrolled {
 }
 
 .stat-number {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: 1.35rem;
   font-weight: 800;
   background: var(--grad);
@@ -511,7 +511,7 @@ section { padding: 6rem 2rem; }
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 800;
   line-height: 1.15;
@@ -911,7 +911,7 @@ section { padding: 6rem 2rem; }
 }
 
 .contact-form h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1.75rem;
@@ -935,7 +935,7 @@ section { padding: 6rem 2rem; }
   border-radius: 10px;
   padding: .9rem 1.1rem;
   color: var(--text);
-  font-family: var(--font);
+  font-family: var(--font), Arial, sans-serif;
   font-size: .95rem;
   transition: border-color .2s, background .2s, box-shadow .2s;
   outline: none;
@@ -968,7 +968,7 @@ footer {
 }
 
 .footer-logo {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
   background: var(--grad);

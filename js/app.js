@@ -3,16 +3,30 @@ const hamburger = document.getElementById('hamburger');
 
 const mobileMenu = document.createElement('div');
 mobileMenu.className = 'mobile-menu';
-mobileMenu.innerHTML = `
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="cv/Morne-du-Toit-CV.html?print=1" class="nav-cta download-cv-trigger">Download CV</a>
-`;
+
+const mobileNavList = document.createElement('ul');
+[
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'education', label: 'Education' },
+  { id: 'contact', label: 'Contact' },
+].forEach(item => {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = `./index.html#${item.id}`;
+  a.textContent = item.label;
+  li.appendChild(a);
+  mobileNavList.appendChild(li);
+});
+
+const mobileDownload = document.createElement('a');
+mobileDownload.href = './cv/Morne-du-Toit-CV.html?print=1';
+mobileDownload.className = 'nav-cta download-cv-trigger';
+mobileDownload.textContent = 'Download CV';
+
+mobileMenu.appendChild(mobileNavList);
+mobileMenu.appendChild(mobileDownload);
 document.body.appendChild(mobileMenu);
 
 window.addEventListener('scroll', () => {
@@ -59,6 +73,16 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+document.querySelectorAll('img[data-fallback-icon="true"]').forEach(img => {
+  img.addEventListener('error', () => {
+    img.style.display = 'none';
+    const fallbackIcon = img.nextElementSibling;
+    if (fallbackIcon) {
+      fallbackIcon.style.display = 'block';
+    }
   });
 });
 

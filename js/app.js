@@ -6,8 +6,8 @@ mobileMenu.className = 'mobile-menu';
 mobileMenu.innerHTML = `
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -62,17 +62,30 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-document.getElementById('contact-form').addEventListener('submit', e => {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-  btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-    btn.style.background = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 3000);
-});
+const copyEmailBtn = document.getElementById('copy-email-btn');
+
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = copyEmailBtn.dataset.email || 'mornef.dt@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch (_) {
+      const temp = document.createElement('textarea');
+      temp.value = email;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+    }
+
+    const original = copyEmailBtn.textContent;
+    copyEmailBtn.textContent = 'Copied!';
+    copyEmailBtn.disabled = true;
+
+    setTimeout(() => {
+      copyEmailBtn.textContent = original;
+      copyEmailBtn.disabled = false;
+    }, 1400);
+  });
+}
 

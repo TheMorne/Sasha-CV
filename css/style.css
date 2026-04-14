@@ -301,7 +301,7 @@ nav.scrolled {
 
 .profile-wrap {
   position: relative;
-  padding: 40px 50px 20px 20px;
+  padding: 40px 56px 56px 28px;
 }
 
 .profile-glow {
@@ -332,7 +332,7 @@ nav.scrolled {
 .profile-avatar {
   position: relative;
   z-index: 1;
-  width: 110px; height: 110px;
+  width: 126px; height: 126px;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(124,58,237,.3), rgba(6,182,212,.3));
   border: 2px solid rgba(124,58,237,.4);
@@ -341,7 +341,7 @@ nav.scrolled {
   justify-content: center;
   font-size: 2.8rem;
   color: var(--text-muted);
-  margin: 2rem auto 1.25rem;
+  margin: 1.6rem auto 1rem;
   overflow: hidden;
 }
 
@@ -349,6 +349,7 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 26%;
   display: block;
 }
 
@@ -382,7 +383,7 @@ nav.scrolled {
   display: flex;
   justify-content: space-around;
   border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
+  padding-top: 1rem;
 }
 
 .stat-number {
@@ -415,15 +416,16 @@ nav.scrolled {
   align-items: center;
   gap: .75rem;
   box-shadow: var(--shadow);
+  z-index: 3;
 }
 
 .badge-1 {
-  top: 0; right: 0;
+  top: -8px; right: -6px;
   animation: floatUp 3.5s ease-in-out infinite;
 }
 
 .badge-2 {
-  bottom: 30px; left: -10px;
+  bottom: -14px; left: -34px;
   animation: floatUp 3.5s ease-in-out infinite 1.75s;
 }
 
@@ -1029,6 +1031,8 @@ footer p span { color: var(--accent); }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .contact-grid { grid-template-columns: 1fr; }
   .about-details { grid-template-columns: 1fr 1fr; }
+  .profile-wrap { padding: 28px 34px 52px 20px; }
+  .badge-2 { bottom: -10px; left: -18px; }
 }
 
 @media (max-width: 600px) {

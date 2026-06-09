@@ -80,7 +80,7 @@ nav.scrolled {
 }
 
 .nav-links a {
-  color: var(--text-muted);
+  color: #ffffff;
   text-decoration: none;
   font-size: .9rem;
   font-weight: 500;
@@ -98,8 +98,16 @@ nav.scrolled {
   transition: width .3s;
 }
 
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover { color: #ffffff; }
 .nav-links a:hover::after { width: 100%; }
+
+nav.scrolled .nav-links a {
+  color: var(--text);
+}
+
+nav.scrolled .nav-links a:hover {
+  color: var(--accent);
+}
 
 .nav-cta {
   padding: .55rem 1.4rem;
@@ -323,7 +331,7 @@ nav.scrolled {
 .profile-card-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,245,246,.98));
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.98));
   border: 1px solid rgba(212,175,55,.2);
   border-radius: 26px;
   backdrop-filter: blur(12px);
@@ -500,12 +508,80 @@ nav.scrolled {
 
 section { padding: 6rem 2rem; }
 
+body > section:nth-of-type(odd) {
+  background: #0b0b0b;
+  color: #f5f5f5;
+}
+
+body > section:nth-of-type(even) {
+  background: #ffffff;
+  color: var(--text);
+}
+
 .section-inner {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.alt-bg { background: var(--bg-alt); }
+.alt-bg { background: inherit; }
+
+body > section:nth-of-type(odd) .hero-name,
+body > section:nth-of-type(odd) .section-title,
+body > section:nth-of-type(odd) .timeline-title,
+body > section:nth-of-type(odd) .skill-category-title,
+body > section:nth-of-type(odd) .highlight-content h4,
+body > section:nth-of-type(odd) .detail-value,
+body > section:nth-of-type(odd) .contact-text-value {
+  color: #f5f5f5;
+}
+
+body > section:nth-of-type(odd) .hero-role,
+body > section:nth-of-type(odd) .hero-tagline,
+body > section:nth-of-type(odd) .section-subtitle,
+body > section:nth-of-type(odd) .about-text p,
+body > section:nth-of-type(odd) .detail-label,
+body > section:nth-of-type(odd) .timeline-desc,
+body > section:nth-of-type(odd) .highlight-content p,
+body > section:nth-of-type(odd) .contact-text-label,
+body > section:nth-of-type(odd) .badge-sub,
+body > section:nth-of-type(odd) .skill-tag {
+  color: #cfcfcf;
+}
+
+body > section:nth-of-type(odd) .btn-outline {
+  border-color: rgba(255,255,255,.35);
+  color: #f5f5f5;
+}
+
+body > section:nth-of-type(odd) .btn-outline:hover {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.55);
+}
+
+body > section:nth-of-type(odd) .social-link,
+body > section:nth-of-type(odd) .hero-scroll-btn {
+  border-color: rgba(255,255,255,.35);
+  color: #cfcfcf;
+}
+
+body > section:nth-of-type(odd) .social-link:hover,
+body > section:nth-of-type(odd) .hero-scroll-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+body > section:nth-of-type(odd) .highlight-card,
+body > section:nth-of-type(odd) .skill-category,
+body > section:nth-of-type(odd) .timeline-card,
+body > section:nth-of-type(odd) .contact-item {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+
+body > section:nth-of-type(odd) .timeline-dot {
+  border-color: #0b0b0b;
+}
 
 .section-tag {
   display: inline-flex;

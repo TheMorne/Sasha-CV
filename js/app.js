@@ -21,7 +21,7 @@ const mobileNavList = document.createElement('ul');
 });
 
 const mobileDownload = document.createElement('a');
-mobileDownload.href = './cv/Morne-du-Toit-CV.html?print=1';
+mobileDownload.href = './cv/Sasha-Lee-du-Toit-CV.html?print=1';
 mobileDownload.className = 'nav-cta download-cv-trigger';
 mobileDownload.textContent = 'Download CV';
 
@@ -42,9 +42,10 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 });
 
 const roles = [
-  'Full Stack Software Engineer',
-  'AI Engineer',
-  'Frontend Expert'
+  'Multimedia Specialist',
+  'Graphic Designer',
+  'Illustrator',
+  'Visual Content Creator'
 ];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const typeEl = document.getElementById('typewriter');
@@ -90,7 +91,7 @@ const copyEmailBtn = document.getElementById('copy-email-btn');
 
 if (copyEmailBtn) {
   copyEmailBtn.addEventListener('click', async () => {
-    const email = copyEmailBtn.dataset.email || 'mornef.dt@gmail.com';
+    const email = copyEmailBtn.dataset.email || 'sashalee.curlewis@gmail.com';
     try {
       await navigator.clipboard.writeText(email);
     } catch (_) {
@@ -116,7 +117,7 @@ if (copyEmailBtn) {
 document.querySelectorAll('.download-cv-trigger').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    const cvUrl = link.getAttribute('href') || 'cv/Morne-du-Toit-CV.html?print=1';
+    const cvUrl = link.getAttribute('href') || 'cv/Sasha-Lee-du-Toit-CV.html?print=1';
     const popup = window.open(cvUrl, '_blank', 'noopener,noreferrer');
     if (!popup) {
       alert('Please allow pop-ups to open the CV print dialog.');
